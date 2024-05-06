@@ -21,3 +21,5 @@ dataset$State = factor(dataset$State,
 # The dot means all independent variables
 regressor = lm(formula = Profit ~ .,
                data = training_set)
+
+y_pred = predict(regressor, newdata = test_set)
