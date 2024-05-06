@@ -23,3 +23,9 @@ regressor = lm(formula = Profit ~ .,
                data = training_set)
 
 y_pred = predict(regressor, newdata = test_set)
+
+
+# Backward Elimination
+regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
+               data = training_set)
+summary(regressor)
